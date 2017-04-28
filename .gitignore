@@ -1,0 +1,10 @@
+### Gradle template
+.gradle
+build/
+classes/
+*.iml
+.idea/
+.idea_modules/
+*.class
+*.war
+*.ear

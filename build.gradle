@@ -31,4 +31,7 @@ allprojects {
     }
 }
 
+dependencies {
+    compile project(':jeeside-core')
+}
 

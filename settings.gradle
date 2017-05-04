@@ -1,3 +1,5 @@
 rootProject.name = 'jeeside'
 
 include ':jeeside-core'
+include ':example'
+

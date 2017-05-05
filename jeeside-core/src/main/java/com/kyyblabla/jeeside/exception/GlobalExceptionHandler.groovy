@@ -1,5 +1,8 @@
 package com.kyyblabla.jeeside.exception
 
+import com.kyyblabla.jeeside.vo.ResponseMessage
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -12,5 +15,14 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  */
 @RestControllerAdvice('com.kyyblabla.jeeside')
 class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+
+    Logger logger = LoggerFactory.getLogger(getClass())
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    ResponseMessage handleException(Exception e) {
+        logger.error('exception:', e)
+        ResponseMessage.error(0, e.message, e)
+    }
 
 }

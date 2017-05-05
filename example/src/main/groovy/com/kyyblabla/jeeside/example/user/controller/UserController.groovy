@@ -1,7 +1,6 @@
 package com.kyyblabla.jeeside.example.user.controller
 
 import com.kyyblabla.jeeside.example.user.model.User
-import com.kyyblabla.jeeside.vo.ResponseMessage
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
